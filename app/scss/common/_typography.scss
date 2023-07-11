@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+
+@font-face {
+  font-family: "Bebas Neue";
+  font-weight: 400;
+  src: url("../fonts/SVN-Bebas Neue Regular.otf"),
+    url("SVN-Bebas Neue Regular.ttf");
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  font-weight: 700;
+  src: url("../fonts/SVN-Bebas Neue Bold.otf"),
+    url("../fonts/SVN-Bebas Neue Bold.ttf");
+}
+
+html,
+body {
+  font-weight: 400;
+  color: $txt-color;
+  font-family: "Roboto", sans-serif;
+
+  /* === Reset Default Style === */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+    margin-bottom: 0.75em;
+    font-family: "Bebas Neue", "Roboto", sans-serif;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: all ease-in 100ms;
+
+    &:hover {
+      transition: all ease-out 150ms;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  p,
+  .desc {
+    margin-top: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+  }
+
+  /* === Font Weight Classes === */
+
+  .bold,
+  strong,
+  b {
+    font-weight: 700;
+  }
+
+  .medium {
+    font-weight: 500;
+  }
+
+  .thin {
+    font-weight: 300;
+  }
+
+  .highlight {
+    font-size: 1.25em;
+  }
+
+  /* === Text Alignment Classes === */
+
+  .txt-center,
+  .text-centeer {
+    text-align: center;
+  }
+
+  .txt-right,
+  .text-right {
+    text-align: right;
+  }
+
+  .bebas {
+    font-family: "Bebas", sans-serif;
+    font-weight: 700;
+  }
+
+  .bebas-regular {
+    font-family: "Bebas", sans-serif;
+    font-weight: 400;
+  }
+
+  .playfair-display {
+    font-family: "Playfair Display", serif !important;
+  }
+
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+  }
+
+  .roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+  }
+
+  /* === Text Color Classes === */
+}
+
+/* === BCM THEMES TYPOGRAPHY ELEMENTS === */
+html,
+body {
+  .btn {
+    display: inline-flex;
+    background-color: $blue;
+    color: #fff;
+    padding: 0 12px;
+    line-height: 28px;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+
+    .arrow {
+      margin-right: 4px;
+      path {
+        fill: $white;
+      }
+    }
+
+    &.btn-block {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    &.btn-transparent {
+      background-color: transparent;
+      color: #000;
+    }
+
+    &.white-txt {
+      color: #fff;
+    }
+
+    &.btn-custom-style-1 {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 1.5;
+      background-color: transparent;
+      color: $txt-color;
+      padding: 0;
+
+      .arrow {
+        margin-left: 4px;
+
+        path {
+          fill: $txt-color;
+        }
+      }
+    }
+  }
+
+  /* === DESKTOP RESPONSIVE === */
+  @media #{$information-sm-laptop} {
+  }
+  /* === DESKTOP RESPONSIVE - END === */
+
+  /* === MOBILE RESPONSIVE === */
+  @media #{$information-lg-tablet} {
+  }
+
+  @media #{$information-tablet} {
+    .btn {
+      &.btn-custom-style-1 {
+        font-size: 16px;
+
+        .arrow {
+          margin-left: 2px;
+
+          path {
+            fill: $txt-color;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-phone} {
+    .btn {
+      padding: 0 24px;
+      line-height: 40px;
+      font-size: 14px;
+
+      .arrow {
+        margin-right: 3px;
+        path {
+          fill: $white;
+        }
+      }
+
+      &.btn-custom-style-1 {
+        font-size: 12px;
+
+        .arrow {
+          margin-left: 2px;
+
+          path {
+            fill: $txt-color;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$information-sm-phone} {
+    .btn {
+      padding: 0 20px;
+      line-height: 36px;
+      font-size: 13px;
+
+      .arrow {
+        margin-right: 2px;
+        path {
+          fill: $white;
+        }
+      }
+
+      &.btn-custom-style-1 {
+        font-size: 12px;
+
+        .arrow {
+          margin-left: 2px;
+
+          path {
+            fill: $txt-color;
+          }
+        }
+      }
+    }
+  }
+  /* === MOBILE RESPONSIVE - END === */
+}

@@ -1,0 +1,620 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  // Common
+  * {
+    box-sizing: border-box;
+  }
+
+  figure {
+    margin: 0;
+    padding: 0;
+  }
+
+  // Image Holder
+  .img-holder {
+    img,
+    picture {
+      display: block;
+      width: 100%;
+    }
+    &.bg-mode {
+      overflow: hidden;
+      img,
+      picture {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
+  // Video
+  video {
+    display: block;
+    max-width: 100%;
+    &[poster] {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // Row
+  .row {
+    display: flex;
+  }
+
+  // Container
+  .container {
+    width: 980px;
+    margin: auto;
+    max-width: 100%;
+  }
+
+  // Products List
+  .products-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+
+    .product-item {
+      margin-bottom: 20px;
+
+      .product-thumbnail {
+        width: 100%;
+        height: 180px;
+        background-color: #999;
+        margin-bottom: 10px;
+      }
+
+      .name {
+        margin: 0 0 5px;
+        font-weight: 700;
+        font-size: 14px;
+      }
+
+      .price {
+        color: red;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  // Sections
+  .section {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+
+    // Section Intro
+    .section-intro {
+      width: 1200px;
+      max-width: 100%;
+      margin: auto;
+      padding-left: 290px;
+      margin-bottom: 50px;
+      position: relative;
+
+      // Intro Decor
+      .section-intro-decor {
+        position: absolute;
+        top: 35px;
+        left: 170px;
+        width: 170px;
+        z-index: -1;
+
+        &.with-text {
+          width: auto;
+          font-size: 144px;
+          font-family: "Bebas Neue" sans-serif;
+          font-weight: 700;
+          color: #e1e6eb;
+          line-height: 1;
+          top: -12px;
+          left: 0;
+        }
+      }
+
+      // Label
+      .section-label {
+        position: relative;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1;
+        padding-top: 11px;
+        color: #808e9c;
+        margin-bottom: 22px;
+        z-index: 2;
+
+        // Decor
+        &:before {
+          content: "";
+          width: 16px;
+          height: 1px;
+          background-color: $blue;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      // Title
+      .section-title {
+        color: $txt-color;
+        font-size: 72px;
+        line-height: 1;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 2;
+        letter-spacing: 0.02em;
+      }
+
+      // Desc Content
+      .desc-content {
+        display: flex;
+        position: relative;
+        z-index: 2;
+
+        .desc-link {
+          height: 1px;
+          width: 48px;
+          margin-right: 12px;
+          background-color: #808e9c;
+          margin-top: 12px;
+        }
+      }
+
+      // Section Desc
+      .section-desc {
+        flex-grow: 1;
+        font-size: 14px;
+        line-height: 1.8;
+        color: #44505c;
+        letter-spacing: 0.015em;
+      }
+
+      // CTA Holder
+      .cta-holder {
+        margin-top: 30px;
+
+        &.no-margin {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  // Page Breadcrumbs
+  .page-breadcrumbs {
+    padding: 20px 0;
+
+    .breadcrumbs-listing {
+      .page-indicator {
+        padding: 0 20px;
+        color: $txt-color;
+        display: inline-block;
+        position: relative;
+        font-size: 14px;
+        line-height: 24px;
+
+        a {
+          &:hover {
+            color: $blue;
+          }
+        }
+
+        &:after {
+          position: absolute;
+          content: "|";
+          color: #808e9c;
+          right: 0;
+        }
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  /* === RESPONSIVE DESKTOP === */
+  @media #{$information-sm-screen} {
+  }
+
+  @media #{$information-sm-laptop} {
+    // Sections
+    .section {
+      // Section Intro
+      .section-intro {
+        max-width: 100%;
+        padding-left: 270px;
+        margin-bottom: 45px;
+
+        // Intro Decor
+        .section-intro-decor {
+          top: 35px;
+          left: 165px;
+          width: 165px;
+          z-index: -1;
+
+          &.with-text {
+            font-size: 140px;
+            top: -12px;
+            left: 0;
+          }
+        }
+
+        // Label
+        .section-label {
+          font-size: 14px;
+          padding-top: 10px;
+          margin-bottom: 20px;
+
+          // Decor
+          &:before {
+            width: 15px;
+          }
+        }
+
+        // Title
+        .section-title {
+          font-size: 68px;
+          margin-bottom: 15px;
+          letter-spacing: 0.02em;
+        }
+
+        // Desc Content
+        .desc-content {
+          .desc-link {
+            height: 1px;
+            width: 45px;
+            margin-right: 11px;
+            margin-top: 11px;
+          }
+        }
+
+        // Section Desc
+        .section-desc {
+          flex-grow: 1;
+          font-size: 14px;
+          letter-spacing: 0.015em;
+        }
+
+        // CTA Holder
+        .cta-holder {
+          margin-top: 28px;
+        }
+      }
+    }
+  }
+  /* === RESPONSIVE DESKTOP - END === */
+
+  /* === MOBILE RESPONSIVE === */
+  @media #{$information-lg-tablet} {
+    // Page Breadcrumbs
+    .page-breadcrumbs {
+      padding: 20px 50px;
+
+      .breadcrumbs-listing {
+        .page-indicator {
+          padding: 0 20px;
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    // Sections
+    .section {
+      width: 100% !important;
+      margin: 0 !important;
+
+      // Section Intro
+      .section-intro {
+        width: 100%;
+        padding: 0 50px;
+        margin-bottom: 45px;
+
+        // Intro Decor
+        .section-intro-decor {
+          top: 5vw;
+          left: 0px;
+          width: 27.5vw;
+
+          &.with-text {
+            font-size: 140px;
+            top: -12px;
+            left: 0;
+          }
+        }
+
+        // Label
+        .section-label {
+          font-size: 20px;
+          padding-top: 10px;
+          margin-bottom: 3vw;
+
+          // Decor
+          &:before {
+            width: 4vw;
+          }
+        }
+
+        // Title
+        .section-title {
+          font-size: 80px;
+          margin-bottom: 2vw;
+          letter-spacing: 0.02em;
+        }
+
+        // Desc Content
+        .desc-content {
+          .desc-link {
+            height: 1px;
+            width: 10%;
+            margin-right: 2vw;
+            margin-top: 11px;
+          }
+        }
+
+        // Section Desc
+        .section-desc {
+          flex-grow: 1;
+          font-size: 18px;
+          letter-spacing: 0.015em;
+        }
+
+        // CTA Holder
+        .cta-holder {
+          margin-top: 3vw;
+        }
+      }
+    }
+  }
+
+  @media #{$information-tablet} {
+    // Page Breadcrumbs
+    .page-breadcrumbs {
+      padding: 15px 30px;
+
+      .breadcrumbs-listing {
+        .page-indicator {
+          padding: 0 20px;
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    // Sections
+    .section {
+      // Section Intro
+      .section-intro {
+        width: 100%;
+        padding: 0 30px;
+        margin-bottom: 5vw;
+
+        // Intro Decor
+        .section-intro-decor {
+          top: 5vw;
+          left: 0px;
+          width: 27.5vw;
+
+          &.with-text {
+            font-size: 140px;
+            top: -12px;
+            left: 0;
+          }
+        }
+
+        // Label
+        .section-label {
+          font-size: 18px;
+          padding-top: 10px;
+          margin-bottom: 3vw;
+
+          // Decor
+          &:before {
+            width: 4vw;
+          }
+        }
+
+        // Title
+        .section-title {
+          font-size: 72px;
+          margin-bottom: 3vw;
+          letter-spacing: 0.02em;
+        }
+
+        // Desc Content
+        .desc-content {
+          .desc-link {
+            height: 1px;
+            width: 15%;
+            margin-right: 2vw;
+            margin-top: 18px;
+          }
+        }
+
+        // Section Desc
+        .section-desc {
+          flex-grow: 1;
+          font-size: 18px;
+          letter-spacing: 0.015em;
+        }
+
+        // CTA Holder
+        .cta-holder {
+          margin-top: 3vw;
+        }
+      }
+    }
+  }
+
+  @media #{$information-phone} {
+    // Page Breadcrumbs
+    .page-breadcrumbs {
+      padding: 15px 15px;
+
+      .breadcrumbs-listing {
+        .page-indicator {
+          padding: 0 15px;
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+    }
+
+    // Sections
+    .section {
+      // Section Intro
+      .section-intro {
+        padding: 0 15px;
+        margin-bottom: 5vw;
+
+        // Intro Decor
+        .section-intro-decor {
+          top: 10vw;
+          left: 0px;
+          width: 30vw;
+
+          &.with-text {
+            font-size: 140px;
+            top: -12px;
+            left: 0;
+          }
+        }
+
+        // Label
+        .section-label {
+          font-size: 14px;
+          padding-top: 10px;
+          margin-bottom: 5vw;
+
+          // Decor
+          &:before {
+            width: 4vw;
+          }
+        }
+
+        // Title
+        .section-title {
+          font-size: 36px;
+          margin-bottom: 5vw;
+          letter-spacing: 0.02em;
+        }
+
+        // Desc Content
+        .desc-content {
+          .desc-link {
+            height: 1px;
+            width: 10%;
+            margin-right: 2vw;
+            margin-top: 15px;
+            flex-shrink: 0;
+          }
+        }
+
+        // Section Desc
+        .section-desc {
+          flex-grow: 1;
+          font-size: 14px;
+          line-height: 1.8;
+          letter-spacing: 0.015em;
+        }
+
+        // CTA Holder
+        .cta-holder {
+          margin-top: 10vw;
+        }
+      }
+    }
+  }
+
+  @media #{$information-sm-phone} {
+    // Page Breadcrumbs
+    .page-breadcrumbs {
+      padding: 13px;
+
+      .breadcrumbs-listing {
+        .page-indicator {
+          padding: 0 13px;
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+    }
+
+    // Sections
+    .section {
+      // Section Intro
+      .section-intro {
+        padding: 0 13px;
+        margin-bottom: 5vw;
+
+        // Intro Decor
+        .section-intro-decor {
+          top: 10vw;
+          left: 0px;
+          width: 30vw;
+
+          &.with-text {
+            font-size: 140px;
+            top: -12px;
+            left: 0;
+          }
+        }
+
+        // Label
+        .section-label {
+          font-size: 13px;
+          padding-top: 10px;
+
+          // Decor
+          &:before {
+            width: 4vw;
+          }
+        }
+
+        // Title
+        .section-title {
+          font-size: 33px;
+          letter-spacing: 0.02em;
+        }
+
+        // Desc Content
+        .desc-content {
+          .desc-link {
+            height: 1px;
+            width: 10%;
+            margin-right: 2vw;
+            margin-top: 15px;
+            flex-shrink: 0;
+          }
+        }
+
+        // Section Desc
+        .section-desc {
+          font-size: 13px;
+          line-height: 1.8;
+          letter-spacing: 0.015em;
+        }
+      }
+    }
+  }
+  /* === MOBILE RESPONSIVE - END === */
+}

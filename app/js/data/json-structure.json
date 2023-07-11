@@ -1,0 +1,121 @@
+{
+ "page_info": {
+  "title": "",
+  "desc": "",
+  "keywords": "",
+  "thumbnail": ""
+ },
+ "home_banner": {
+  "title": "",
+  "desc": "",
+  "slides": [
+   { 
+    "order": 1,
+    "img_url": "", 
+    "img_url_mb": "",
+    "alt": "",  
+   },
+   { 
+    "order": 2,
+    "img_url": "", 
+    "img_url_mb": "",
+    "alt": "",  
+   },
+   { 
+    "order": 3,
+    "img_url": "", 
+    "img_url_mb": "",
+    "alt": "",  
+   },
+  ]
+ },
+ "home_sale_info": {
+  "title": "KHUYẾN MÃI",
+  "desc": null,
+  "sale_list": [
+   {
+   "order": 1,
+   "address": "",
+   "name": "",
+   "detail": "",
+   "date": "01.09.2020 - 03.09.2021",
+   "img_url": "",
+   "img_alt": ""
+   },
+   {
+   "order": 2,
+   "address": "",
+   "name": "",
+   "detail": "",
+   "date": "01.09.2020 - 03.09.2021",
+   "img_url": "",
+   "img_alt": ""
+   }
+  ]
+ },
+ "home_tvc": {
+  "type": "file",
+  "video_url": "",
+  "thumbnail_url": "",
+  "youtubg_id": ""
+ },
+ "home_gallery": {
+  "title": "",
+  "albums": [
+   { 
+    "order": 1,
+    "name": "",
+    "images": [
+     {
+      "order": 1,
+      "thumbnail_url": "",
+      "url": "",
+      "alt": ""
+     },
+     {
+      "order": 1,
+      "thumbnail_url": "",
+      "url": "",
+      "alt": ""
+     }
+    ]
+   },
+   { 
+    "order": 2,
+    "name": "",
+    "images": [
+     {
+      "order": 1,
+      "thumbnail_url": "",
+      "url": "",
+      "alt": ""
+     },
+     {
+      "order": 1,
+      "thumbnail_url": "",
+      "url": "",
+      "alt": ""
+     }
+    ]
+   },
+   { 
+    "order": 3,
+    "name": "",
+    "images": [
+     {
+      "order": 1,
+      "thumbnail_url": "",
+      "url": "",
+      "alt": ""
+     },
+     {
+      "order": 1,
+      "thumbnail_url": "",
+      "url": "",
+      "alt": ""
+     }
+    ]
+   }
+  ]
+ }
+}

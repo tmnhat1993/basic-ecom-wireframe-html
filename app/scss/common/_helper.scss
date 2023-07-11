@@ -1,0 +1,13 @@
+.mb-hide {
+  @media #{$information-lg-tablet} {
+    display: none !important;
+  }
+}
+
+.mb-show {
+  display: none;
+
+  @media #{$information-lg-tablet} {
+    display: block !important;
+  }
+}

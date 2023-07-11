@@ -1,0 +1,37 @@
+.footer {
+  background-color: #ddd;
+
+  .footer-layout {
+    padding: 30px 0;
+    display: flex;
+
+    .col {
+      flex-basis: 25%;
+
+      .info {
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .desc {
+        margin-bottom: 5px;
+        line-height: 1.5;
+        font-size: 14px;
+      }
+
+      .link {
+        line-height: 1.75;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .footer-bottom {
+    background-color: #ccc;
+    p {
+      margin: 0;
+      text-align: center;
+      line-height: 2;
+    }
+  }
+}
